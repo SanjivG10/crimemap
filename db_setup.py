@@ -1,3 +1,5 @@
+#ON MASTER BRANCH NEW SOMETHING! I DONT WANT THIS SHIT! 
+
 import pymysql
 connection = pymysql.connect("localhost",
 							  user="root",
