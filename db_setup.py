@@ -1,9 +1,12 @@
+
 #ON MASTER BRANCH NEW SOMETHING! I DONT WANT THIS SHIT! 
 
 import pymysql
+import dbconfig
+
 connection = pymysql.connect("localhost",
-							  user="root",
-							  password="")
+							  user=dbconfig.db_user,
+							  password=dbconfig.db_password)
 
 try:
 	with connection.cursor() as cursor:
@@ -24,3 +27,5 @@ try:
 		connection.commit()
 finally:
 	connection.close()
+
+#added this line , edited in master one
