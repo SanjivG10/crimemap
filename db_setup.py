@@ -24,3 +24,5 @@ try:
 		connection.commit()
 finally:
 	connection.close()
+
+#ADDED THIS LINE FROM EDIT_BRANCH	
