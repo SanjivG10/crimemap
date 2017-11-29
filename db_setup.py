@@ -1,9 +1,7 @@
 import pymysql
-import dbconfig 
-
 connection = pymysql.connect("localhost",
-							  user=dbconfig.db_user,
-							  password=dbconfig.db_password)
+							  user="root",
+							  password="")
 
 try:
 	with connection.cursor() as cursor:
@@ -20,6 +18,7 @@ try:
 			PRIMARY KEY(id)
 			)"""
 		cursor.execute(sql)
+		#comitting means now we are saving this
 		connection.commit()
 finally:
 	connection.close()
